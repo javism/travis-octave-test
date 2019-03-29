@@ -1,0 +1,21 @@
+language: c
+group: travis_latest
+dist: xenial
+  
+addons:
+  apt:
+    packages:
+    - octave
+    - liboctave-dev
+
+matrix:
+  include:
+  - os: linux
+  
+script:
+- octave-cli tests/installpkgs.m
+- octave-cli test_myfuncs.m
+
+notifications:
+  slack:
+    on_success: always
