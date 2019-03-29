@@ -14,7 +14,7 @@ matrix:
   
 script:
 - octave-cli tests/installpkgs.m
-- octave-cli test_myfuncs.m
+- octave-cli tests/pom-test.m
 
 notifications:
   slack:
