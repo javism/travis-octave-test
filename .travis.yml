@@ -5,8 +5,8 @@ dist: xenial
 before_install:
   - sudo add-apt-repository ppa:octave/stable -y
   - sudo apt-get update -q
-  - sudo apt-get install octave liboctave-dev -y
-  - sudo apt-get install python3-pip
+  - sudo apt-get install octave liboctave-dev python3-pip -y
+  - pip3 install --upgrade pip
   - pip3 install --user jupyter
   - pip3 install --user octave_kernel
 
