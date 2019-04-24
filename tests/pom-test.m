@@ -1,6 +1,5 @@
-%sudo apt-get install octave liboctave-dev
-%pkg install -forge io
-%pkg install -forge statistics
+% Check errors before exit and force exit Octave with error code
+atexit('check_errors_exit');
 
 pkg load statistics
 warning('off','Octave:nearly-singular-matrix')
@@ -29,5 +28,5 @@ if ( abs(accRef - testacc) < 0.1 )
   printf('\nTest OK\n');
 else
   error('\nTest failed\n');
-  exit(1);
 end
+
