@@ -28,5 +28,5 @@ testacc = sum(diag(testCM ))/sum(testCM(:));
 if ( abs(accRef - testacc) < 0.1 )
   printf('\nTest OK\n');
 else
-  printf('\nTest failed\n');
+  error('\nTest failed\n');
 end

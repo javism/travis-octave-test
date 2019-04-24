@@ -11,3 +11,4 @@ def _exec_notebook(path):
 
 def test():
 	_exec_notebook('example-notebook.ipynb')
+	_exec_notebook('example-notebook-python.ipynb')
