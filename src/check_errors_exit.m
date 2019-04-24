@@ -1,4 +1,4 @@
-function check_errors ()
+function check_errors_exit ()
   lasterr()
   if ~isempty(lasterr())
     exit
