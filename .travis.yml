@@ -5,10 +5,11 @@ dist: xenial
 before_install:
   - sudo add-apt-repository ppa:octave/stable -y
   - sudo apt-get update -q
-  - sudo apt-get install octave liboctave-dev python-pip python-pytest -y
-  - pip install --user --upgrade pip
-  - pip install --user jupyter
-  - pip install --user octave_kernel
+  - sudo apt-get install octave liboctave-dev -y
+#  - sudo apt-get install octave liboctave-dev python-pip -y
+#  - pip install --user --upgrade pip
+#  - pip install --user jupyter
+#  - pip install --user octave_kernel 
 
 addons:
   apt:
@@ -23,10 +24,5 @@ matrix:
 script:
 - octave-cli tests/installpkgs.m
 - octave-cli tests/pom-test.m
-#- jupyter nbconvert --to html --execute notebooks/example-notebook.ipynb
 - cd notebooks 
-- py.test
-
-notifications:
-  slack:
-    on_success: always
+- ./test_notebooks.sh
