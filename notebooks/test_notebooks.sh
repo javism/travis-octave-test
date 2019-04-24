@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash 
 jupyter nbconvert --to script example-notebook.ipynb
 octave-cli example-notebook.m
 #octave-cli example_notebook.m
