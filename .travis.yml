@@ -6,10 +6,9 @@ before_install:
   - sudo add-apt-repository ppa:octave/stable -y
   - sudo apt-get update -q
   - sudo apt-get install octave liboctave-dev -y
-#  - sudo apt-get install octave liboctave-dev python-pip -y
-#  - pip install --user --upgrade pip
-#  - pip install --user jupyter
-#  - pip install --user octave_kernel 
+  - pip install --user --upgrade pip
+  - pip install --user jupyter
+  - pip install --user octave_kernel 
 
 addons:
   apt:
