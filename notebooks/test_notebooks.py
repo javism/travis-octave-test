@@ -6,7 +6,7 @@ text = result.communicate()[0]
 returncode = result.returncode
 print("returncode:" + str(returncode))
 
-if returncode != 0
+if returncode != 0:
 	exit(returncode)
 
 

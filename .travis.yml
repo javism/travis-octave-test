@@ -24,4 +24,5 @@ script:
 - octave-cli tests/installpkgs.m
 - octave-cli tests/pom-test.m
 - cd notebooks 
+- ./test_notebooks.sh
 - python test_notebooks.py
