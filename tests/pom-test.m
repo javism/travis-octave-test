@@ -23,7 +23,7 @@ results = classifier.runAlgorithm(iristrain, iristest);
 trainCM = confusionmat(results.predictedTrain,iristrain.targets);
 testCM = confusionmat(results.predictedTest,iristest.targets);
 
-accRef = 0.55;
+accRef = 0.35;
 testacc = sum(diag(testCM ))/sum(testCM(:));
 if ( abs(accRef - testacc) < 0.1 )
   printf('\nTest OK\n');
