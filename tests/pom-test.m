@@ -29,4 +29,5 @@ if ( abs(accRef - testacc) < 0.1 )
   printf('\nTest OK\n');
 else
   error('\nTest failed\n');
+  exit(1);
 end
